@@ -3,11 +3,12 @@ import streamlit as st
 # Find more emojis here: https://www.webfx.com/tools/emoji-cheat-sheet/
 st.set_page_config(page_title="Side Hustle", page_icon=":tada:", layout="wide")
 
+# User local CSS
 def local_css(file_name):
     with open(file_name) as f:
-        st.markdown(f"<style>{f.read()}</style>", usafe_allow_html=True)
+        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-        local_css("style/style.css")
+local_css("styles/style.css")
 
 st.markdown("""
 <style>
@@ -64,7 +65,7 @@ with st.container():
 
 # Documention: https://formsubmit.co/ !!! CHANGE EMAIL ADDRESS !!!
 contact_form = """
-<form action="https://formsubmit.co/umartukur55@gmail.com" method="POST">
+<form action="https://formsubmit.co/umarmtukur55@gmail.com" method="POST">
      <input type="hidden" name="_captcha" value="false">
      <input type="text" name="name" placeholder="Your name" required>
      <input type="email" name="email" placeholder="You gmail" required>
