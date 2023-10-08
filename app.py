@@ -1,4 +1,6 @@
 import streamlit as st
+from streamlit_option_menu import option_menu
+
 
 # Find more emojis here: https://www.webfx.com/tools/emoji-cheat-sheet/
 st.set_page_config(page_title="Side Hustle", page_icon=":tada:", layout="wide")
@@ -35,6 +37,16 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
+with st.sidebar:
+    selected = option_menu (
+    menu_title="None",
+    options=["Home", "About Us",],
+    icons=["Hous",],
+    menu_icon="cast",
+    default_index=0,
+    # orientation="horizontal",
+    )
+
 # st.container():
 
 st.header("BUSINESS MANAGEMENT",)
@@ -43,7 +55,7 @@ st.subheader("Hi, I am Umar Muhammad Tukur :wave:")
 st.title("AN Online Business from Nigeria")
 
 st.write("Imagine being able to make hundreds of thousands or even millions by having a profitable side hustle on top of your current business.")
-st.image("Image1.jpg", width=700)
+st.image("Image1.jpg", width=350)
 
 # with st.container():
 st.write("---")
@@ -51,7 +63,7 @@ st.write("---")
 st.write("Imagine learning the Simple set of skills that business are paying top dollar for")
 st.write("Imagine having a skills that businesss realy need and to pay buck for")
 st.write("Having one stream of income is a risk becouse that business can fold up, By then your are going to go into financial crisis, but if you have a side hustle and that happened you will easily siwitch to your sidehustle.")
-st.image("side-hustle-2.jpg", width=700)
+st.image("side-hustle-2.jpg", width=350)
 st.write("This is for anyone lookingfor a profitable side hustle, to add on top of jis thier business")
 st.write("If you are stay at home num looking for a profitable online side hustle your start from home.")
 st.write("You are 9-5 corporate worker looking for lucrative side hustle you can do to increase your revenue.")
@@ -63,6 +75,8 @@ with st.container():
     st.write("##")
 
 
+
+
 # Documention: https://formsubmit.co/ !!! CHANGE EMAIL ADDRESS !!!
 contact_form = """
 <form action="https://formsubmit.co/umarmtukur55@gmail.com" method="POST">
@@ -70,7 +84,7 @@ contact_form = """
      <input type="text" name="name" placeholder="Your name" required>
      <input type="email" name="email" placeholder="You gmail" required>
      <textarea name="message" placeholder="Your message here" required></textarea>
-     <button type="submit">Send</button>
+     <button class="submit">Send</button>
 </form>
 """
 left_column, right_column = st.columns(2)

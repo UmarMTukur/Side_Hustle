@@ -13,7 +13,7 @@ input[type=message], input[type=email], input[type=text], textarea{
 }
 
 /* Style the submit button with a specfic background color etc */
-button[type-submit] {
+.submit {
     background-color: #04AA6D;
     color: white;
     padding: 12px 20px;
@@ -23,8 +23,31 @@ button[type-submit] {
 }
 
 /* When moving the mouse over the submit, add a drker color */
-button[type-submit]:hover {
+button[submit]:hover {
     background-color: #45a049;
+}
+
+p, ol, ul, dl {
+    margin: 0px 0px 1rem;
+    padding: 0px;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.st-emotion-cache-10trblm {
+    position: relative;
+    flex: 1 1 0%;
+    margin-left: calc(3rem);
+    text-align: center;
+    color: #45a049;
+}
+
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    align-content: center;
+    align-items: center;
 }
 
 /* Hide Streamlit Brading */
